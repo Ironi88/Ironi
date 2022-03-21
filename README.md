@@ -29,6 +29,40 @@ URL http:// (Needs to be set up later or just visit my re)
 Lintk to my code https://github.com/Ironi88/Ironi
 
 
+Janina meine Heldin hatte eine Idee
+Strava 2.0 
+test you Fitness level (Piramide)
+
+Projektname: IroniTec Run towards your Goal
+##Inhalt
+1. Ausgangslage des Projekts
+2. Funktion/Projektidee
+3. Ablaufdiagramm
+4. Anleitung/Walkthrough
+5. FAQ's
+
+##Ausgangslage des Projekts
+Velotagebuch, Massnahmen zur Verbesserung
+
+
+##Funktion/Projektidee
+Erfassen: Vorname, Nachname, Ort, Alter, Grösse, Gewicht, Datum, Uhrzeit
+Gefühlslevel (Vorgabe Skala-1-10), gefahere km, gefahrene hm, durchschit.  Temp., 
+Wetter (Sonnig, bewölkt, windig, schnee, regen)
+
+Verarbeitung: speichern Datenbank, pro 100k und oder  1000hm gibt es ein Steinbock emoji
+
+
+Ausgabe: Trainingspensum pro Woche, Monat, länge der Strecken
+Angabe über den Status der Steinbocksammlung 
+Challange 10 Steinbock 
+
+
+##Ablaufdiagramm
+
+##Anleitung/Walkthrough
+
+##FAQ's
 
 
 
