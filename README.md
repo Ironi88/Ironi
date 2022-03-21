@@ -2,7 +2,7 @@
 # 🚴‍♀ 🚴 ️VeloMio
 Hallo und Herzliche willkommen zu meinem Python Programm VeloMio
 
-## ☝ Inhaltsübersicht
+## ☝Inhaltsübersicht☝ 
 1. Ausgangslage des Projekts
 2. Funktion/Projektidee
 3. Ablaufdiagramm
@@ -24,7 +24,7 @@ Punkte System der pro 100k und oder 1000hm gibt es ein Steinbock.
 Ausgabe: Gesammelte KM, Gesammelte Hm und Stand Anzahl Steinbock x von 10
 bei 10 von 10 Challenge Done 
 
-##3. Ablaufdiagramm
+##3. Ablaufdiagramm  (noch nicht erstellt )
 https://app.diagrams.net/#G1lI50nTNPo-A5iqcfEOgooin0duN972aB
 
 ##4. ## 🏁 Anleitung/Walkthrough
