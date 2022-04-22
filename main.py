@@ -1,24 +1,28 @@
 from flask import Flask
 from flask import render_template
-from flask import url_for
-import random
-
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-
-    names = ['Fabian', "Wolfgang", "Michael", "Cristina", "Meret"]
-    name_choice = random.choice(names)
-    about_link = url_for("about")
-    return render_template("index.html", name=name_choice, link=about_link)
+from flask import request
+import daten
 
 
-@app.route("/about")
-def about():
-    return "About test"
+app = Flask("Ironi")
+
+app = Flask("daten")
+
+@app.route("/formular/", methods=['GET', 'POST'])
+def formular():
+    if request.method == 'POST':
+        ziel_person = request.form['vorname']
+        rueckgabe_string = "Hello" + ziel_person + "!"
+        return rueckgabe_string
+    else:
+        return render_template("formular.html")
+
+@app.route("/speichern/<aktivitaet>")
+def speichern(aktivitaet):
+    zeitpunkt, aktivitaet = daten.aktivitaet_speichern(aktivitaet)
+
+    return "Gespeichert: " + aktivitaet + " um " + str(zeitpunkt)
 
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
-
