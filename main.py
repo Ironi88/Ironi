@@ -3,10 +3,15 @@ from flask import render_template
 from flask import request
 import daten
 
-
 app = Flask("Ironi")
 
+
 app = Flask("daten")
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
 
 @app.route("/formular/", methods=['GET', 'POST'])
 def formular():
