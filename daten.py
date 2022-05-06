@@ -23,7 +23,7 @@ def aktivitaet_speichern(aktivitaet):
     speichern(datei_name, zeitpunkt, aktivitaet)
     return zeitpunkt, aktivitaet
 
-
+"""
 def aktivitaeten_laden():
     datei_name = "aktivitaeten_2.json"
 
@@ -34,3 +34,4 @@ def aktivitaeten_laden():
         datei_inhalt = {}
 
     return datei_inhalt
+"""
