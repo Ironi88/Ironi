@@ -25,7 +25,7 @@ def formular():
         gefahrene_Hm = data["gefahrene Hm"]
         my_dict = [{"Vorname": vorname, "Nachname": nachname, "datum": datum, "gefahrene Km": gefahrene_Km, "gefahrene Hm": gefahrene_Hm}]
         with open("aktivitaeten_2.json", "w") as open_file:
-            json.dump(my_dict, open_file)
+            json.dump(my_dict, open_file, indent=4)  #ident=4 dient dazu, um JSON File "schöner" anzuzeigen.
         return render_template("formular.html")
     else:
         return render_template("formular.html")
