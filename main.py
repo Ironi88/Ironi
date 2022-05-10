@@ -29,6 +29,16 @@ def formular():
         return render_template("formular.html")
     else:
         return render_template("formular.html")
+def load_data_json(pfad, standard_wert = []):
+    #Quelle: https://stackabuse.com/reading-and-writing-json-to-a-file-in-python/ & https://www.programiz.com/python-programming/json
+    #das JSONFile wird im read.modus "r" geöffnet, "w" würde das gesamte File löschen.
+    try:
+        with open("aktivitaeten_2.json", "r") as open_file:
+            return json.load(open_file)
+    except Exception:
+        return aktivitaeten_2.json
+
+
 
 @app.route("/speichern/<aktivitaet>")
 def speichern(aktivitaet):
