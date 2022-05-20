@@ -6,7 +6,6 @@ import json
 app = Flask("Ironi")
 
 
-app = Flask("daten")
 
 @app.route("/")
 def index():
@@ -39,20 +38,20 @@ def formular():
         with open("aktivitaeten.json", "w") as open_file:
             json.dump(eintraege, open_file, indent=4)  #ident=4 dient dazu, um JSON File "schöner" anzuzeigen.
             text = "Deine Daten wurden gespeichert" #Anzeigetext nachdem die Daten eingeben und gesendet sind
-        return render_template("formular.html", anzeige=text)
+        return render_template("formular.html", anzeige=text) #anzeige wird im html benötig
     else:
         return render_template("formular.html")
 
 @app.route("/berechnung/", methods=["GET", "POST"])
 def berechnung():
-    data = get_data()  #defintion von oben
+    data = get_data()  #defintion von oben zugriff auf json datei aktivitäten
 
-    for item in data:
-        print(item)
-        print(item['gefahrene Km'])
+    for velo_fahrt in data:  #for loop damit bereits gesammelt Steinböcke addiert werden
+        print(velo_fahrt["gefahrene Km"])
+        print(velo_fahrt["gefahrene Hm"])
 
-    gefahrene_km = float(data[9]['gefahrene Km'])
-    gefahrene_hm = float(data[9]['gefahrene Hm'])
+    gefahrene_km = float(data[14]["gefahrene Km"])
+    gefahrene_hm = float(data[14]["gefahrene Hm"])
     steinbock = 0
     summe_1 = 0
     summe_2 = 0
@@ -63,10 +62,10 @@ def berechnung():
     if gefahrene_hm >= 1000:
         summe_2 = steinbock + 1
 
-    print(f"summe_1: {summe_1}, summe_2: {summe_2}")
-    print("summe_1:" + str(summe_1))
+    print(f"summe_1: {summe_1}, summe_2: {summe_2}") #f string ermöglicht verkürzte Schreibweise
+    #print("summe_1:" + str(summe_1))  #andere Weg anstatt f string
 
-    return render_template("berechnung.html", inhalt=summe_1, inhalt2=summe_2)
+    return render_template("berechnung.html", gefahrene_km=summe_1, gefahrene_hm=summe_2)
 
 
 @app.route("/regeln/", methods=["GET", "POST"]) #Erklärt das Spiel und wie die Steinböcke gesammelt werden
