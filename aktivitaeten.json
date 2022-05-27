@@ -103,5 +103,12 @@
         "datum": "20.20",
         "gefahrene Km": "90",
         "gefahrene Hm": "1004"
+    },
+    {
+        "Vorname": "Vroni",
+        "Nachname": "K\u00fchne",
+        "datum": "12.02.2022",
+        "gefahrene Km": "100",
+        "gefahrene Hm": "900"
     }
 ]
