@@ -26,13 +26,12 @@ def formular():
     if request.method == "POST":
         data = request.form
         vorname = data["vorname"]
-        nachname = data["nachname"]
         datum = data["datum"]
         gefahrene_Km = data["gefahrene Km"]
         gefahrene_Hm = data["gefahrene Hm"]
 
         eintraege = get_data() #def siehe oben nicht mehrmals daten holen.. refectering..
-        eingabe_formular = {"Vorname": vorname, "Nachname": nachname, "datum": datum, "gefahrene Km": gefahrene_Km, "gefahrene Hm": gefahrene_Hm}
+        eingabe_formular = {"Vorname": vorname,"datum": datum, "gefahrene Km": gefahrene_Km, "gefahrene Hm": gefahrene_Hm}
         eintraege.append(eingabe_formular)
 
         with open("aktivitaeten.json", "w") as open_file:
