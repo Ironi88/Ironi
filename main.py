@@ -9,14 +9,14 @@ app = Flask("Ironi")
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", title="Startseite")
 
 def get_data():  # Allgemeine Definition, weil das Laden der Daten mehrmals gebraucht wird.
     try:
         with open("aktivitaeten.json", "r") as open_file:
             eintraege = json.load(open_file)
     except FileNotFoundError:
-        eintraege = []
+        eintraege = [] #für den Fall das es der erste Eintrag ist.
     return eintraege
 
 
@@ -43,7 +43,43 @@ def formular():
 
 @app.route("/berechnung/", methods=["GET", "POST"])
 def berechnung():
-    data = get_data()  #defintion von oben zugriff auf json datei aktivitäten
+
+    data = get_data()
+
+    summe_steinboecke_remo = 0
+    summe_steinboecke_rahel = 0
+    summe_steinboecke_moni = 0
+    summe_steinboecke_vroni = 0
+
+    for key, value in data:
+        if value["vorname"] == "Remo":
+            try:
+                summe_steinboecke_remo+= float(value("gefahrene Km")) #addition assignment operator add two values together and assign the resultant value to a variable https://www.google.ch/search?q=%2B+%3D+in+python+what+does+it+mean&sxsrf=ALiCzsbR_7zAMJBUIkkZE28xz1NE60o80w%3A1654020749387&source=hp&ei=jVqWYsSvFa2blwTWnojwAQ&iflsig=AJiK0e8AAAAAYpZonVozWgJFg-qhfYSOBgyDyoh8ZnbI&ved=0ahUKEwiEqt25q4r4AhWtzYUKHVYPAh4Q4dUDCAY&uact=5&oq=%2B+%3D+in+python+what+does+it+mean&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEB4QFjIGCAAQHhAWOgsIABCABBCxAxCDAToECAAQAzoECC4QAzoFCAAQgAQ6BAgAEBM6AggmOggIABAeEBYQEzoFCCEQoAE6BQgAEMsBOgYIABAeEA06CAgAEB4QDxANOggIABAeEA0QEzoICAAQHhAWEAo6CAgAEB4QDxAWOggIIRAeEBYQHToECCEQFVAAWLCMAWCojgFoEXAAeAKAAd0BiAGYI5IBBzM3LjEwLjGYAQCgAQE&sclient=gws-wiz
+            except:
+                continue
+
+        elif value["vorname"] == "Rahel":
+            try:
+                summe_steinboecke_rahel+= float(value("gefahrene Km"))
+                continue
+
+        elif value["vorname"] == "Moni":
+            try:
+                summe_steinboecke_moni+= float(value("gefahrene Km"))
+            except:
+                continue
+
+        elif value["vorname"] == "Vroni":
+            try:
+                summe_steinboecke_vroni+= float(value("gefahrene Km"))
+            except:
+                continue
+
+
+
+"""
+def berechnung():
+    data = get_data()  #defintion von oben Zugriff auf json datei aktivitäten
 
     for velo_fahrt in data:  #for loop damit bereits gesammelt Steinböcke addiert werden
         print(velo_fahrt["gefahrene Km"])
@@ -65,6 +101,7 @@ def berechnung():
     #print("summe_1:" + str(summe_1))  #andere Weg anstatt f string
 
     return render_template("berechnung.html", gefahrene_km=summe_1, gefahrene_hm=summe_2)
+"""
 
 
 @app.route("/regeln/", methods=["GET", "POST"]) #Erklärt das Spiel und wie die Steinböcke gesammelt werden

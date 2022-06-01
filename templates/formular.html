@@ -1,23 +1,22 @@
 {% include "header.html" %}
 
 <h1>VeloMio Challenge</h1>
+
 <form method="POST">
-     <select class="form-select"type="text" name="Klick deine namen an" placeholderler="Default select example" name="name">
-            <option type="text" name="Klick deine namen an"</option>
+        <select class="form-select" aria-label="Default select example" name="vorname"> <!--quelle https://getbootstrap.com/docs/5.0/forms/select/ -->
+            <option selected > Hi, wer bist du? </option>
             <option value="Remo">Remo</option>
-            <option value="Ragel">Rahel</option>
+            <option value="Rahel">Rahel</option>
             <option value="Moni">Moni</option>
             <option value="Vroni">Vroni</option>
-        </select><br><br>
-    <input type="text" name="datum" placeholder="Datum"><br><br>
-    <input type="number" name="gefahrene Km" placeholder="gefahrene Km"><br><br>
-    <input type="number" name="gefahrene Hm" placeholder="gefahrene Hm"><br><br>
-    <button type="submit">Senden</button>
+        </select><br>
+        <input type="text" name="datum" placeholder="Datum"><br><br>
+        <input type="number" name="gefahrene Km" placeholder="gefahrene Km"><br><br>
+        <input type="number" name="gefahrene Hm" placeholder="gefahrene Hm"><br><br>
+        <button type="submit">Senden</button>
+
 </form>
 
-
-
-
-<div><p> {{ anzeige }} </p></div>  <!--Formular-->
+<div><p> {{ anzeige }} </p></div>
 </body>
 </html>
