@@ -50,7 +50,7 @@ def berechnung():
     steinbock_remo = 0
     summe_km_remo = 0
     steinbock_rahel=0
-    summe_km_rahel = 0
+    summe_km_rahel =0
     steinbock_moni =0
     summe_km_moni = 0
     steinbock_vroni=0
