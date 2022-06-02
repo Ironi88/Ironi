@@ -1,120 +1,35 @@
 [
     {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "17.05.2022",
-        "gefahrene Km": "30",
-        "gefahrene Hm": "500"
+        "Vorname": "Remo",
+        "datum": "02.06.2022",
+        "gefahrene Km": "240",
+        "gefahrene Hm": "100"
+    },
+    {
+        "Vorname": "Remo",
+        "datum": "02.06.2022",
+        "gefahrene Km": "120",
+        "gefahrene Hm": "50"
+    },
+    {
+        "Vorname": "Remo",
+        "datum": "02.06.2022",
+        "gefahrene Km": "260",
+        "gefahrene Hm": "200"
+    },
+    {
+        "Vorname": "Remo",
+        "datum": "02.06.2022",
+        "gefahrene Km": "200"
+    },
+    {
+        "Vorname": "Rahel",
+        "datum": "02.06.2022",
+        "gefahrene Km": "100"
     },
     {
         "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "17.05.2022",
-        "gefahrene Km": "30",
-        "gefahrene Hm": "500"
-    },
-    {
-        "Vorname": "dsfdsf",
-        "Nachname": "dsfds",
-        "datum": "sdffds",
-        "gefahrene Km": "sdffsd",
-        "gefahrene Hm": "sdfsd"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "16.05.2022",
-        "gefahrene Km": "105",
-        "gefahrene Hm": "1002"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "16.05.2022",
-        "gefahrene Km": "105",
-        "gefahrene Hm": "1002"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "16.05.2022",
-        "gefahrene Km": "101",
-        "gefahrene Hm": "1003"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "16.05.2022",
-        "gefahrene Km": "101",
-        "gefahrene Hm": "1400"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "dd",
-        "datum": "sss",
-        "gefahrene Km": "105",
-        "gefahrene Hm": "1500"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "10.05.2022",
-        "gefahrene Km": "101",
-        "gefahrene Hm": "1005"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "k\u00fchne",
-        "datum": "16.03.1988",
-        "gefahrene Km": "140",
-        "gefahrene Hm": "1004"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "19.05.2022",
-        "gefahrene Km": "150",
-        "gefahrene Hm": "2000"
-    },
-    {
-        "Vorname": "dfddsf",
-        "Nachname": "dsfsdf",
-        "datum": "sdffsfd",
-        "gefahrene Km": "1004",
-        "gefahrene Hm": "1150"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "16.03.1988",
-        "gefahrene Km": "500",
-        "gefahrene Hm": "10001"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "k\u00fchne",
-        "datum": "20.10.2022",
-        "gefahrene Km": "150",
-        "gefahrene Hm": "1500"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "Kuehne",
-        "datum": "20.20",
-        "gefahrene Km": "90",
-        "gefahrene Hm": "1004"
-    },
-    {
-        "Vorname": "Vroni",
-        "Nachname": "K\u00fchne",
-        "datum": "12.02.2022",
-        "gefahrene Km": "100",
-        "gefahrene Hm": "900"
-    },
-    {
-        "Vorname": "Hi, wer bist du?",
-        "datum": "dfsd",
-        "gefahrene Km": "500",
-        "gefahrene Hm": "230"
+        "datum": "02.06.2022",
+        "gefahrene Km": "140"
     }
 ]

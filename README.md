@@ -27,9 +27,9 @@ Gefühlslevel (Vorgabe Skala-1-10), gefahrene km, gefahrene hm, Durchschnitt Tem
 Wetter (Sonnig, bewölkt, windig, schnee, regen)
 
 Verarbeitung: speichern Datenbank, Filter Funktion für die oben genannten Values 
-Punkte System der pro 100k und oder 1000hm gibt es ein Steinbock. 
+Punkte System der pro 100k gibt es ein Steinbock. 
 
-Ausgabe: Gesammelte KM, Gesammelte Hm und Stand Anzahl Steinbock x von 10
+Ausgabe: Gesammelte KM, gesammelte Hm und Stand Anzahl Steinbock x von 10
 bei 10 von 10 Challenge Done 
 
 ##3.👀 Architektur 
