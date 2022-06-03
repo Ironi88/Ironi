@@ -1,8 +1,8 @@
 {% include "header.html" %}
+<div class="container">
+    <h1>VeloMio Challenge</h1>
 
-<h1>VeloMio Challenge</h1>
-
-<form method="POST">
+    <form method="POST">
         <select class="form-select" aria-label="Default select example" name="vorname"> <!--quelle https://getbootstrap.com/docs/5.0/forms/select/ -->
             <option selected > Hi, wer bist du? </option>
             <option value="Remo">Remo</option>
@@ -14,8 +14,10 @@
         <input type="number" name="gefahrene Km" placeholder="gefahrene Km"><br><br>
         <button type="submit">Senden</button>
 
-</form>
+    </form>
 
-<div><p> {{ anzeige }} </p></div>
+
+<p> {{ anzeige }} </p>
+</div>
 </body>
-</html>
+

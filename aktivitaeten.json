@@ -31,5 +31,10 @@
         "Vorname": "Vroni",
         "datum": "02.06.2022",
         "gefahrene Km": "140"
+    },
+    {
+        "Vorname": "Moni",
+        "datum": "03.06.2022",
+        "gefahrene Km": "150"
     }
 ]

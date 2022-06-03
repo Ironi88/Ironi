@@ -5,7 +5,6 @@ import json
 from json import loads
 from json import dumps
 
-
 app = Flask("Ironi")
 
 def get_data():  # Allgemeine Definition, weil das Laden der Daten mehrmals gebraucht wird.
@@ -102,17 +101,18 @@ def berechnung():
             else:
                 steinbock_vroni = steinbock_vroni
 
-
+    list = [steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni]
+    list= list.sort()
 
     return render_template("berechnung.html",
                            steinbock_remo=steinbock_remo, summe_km_remo=summe_km_remo,
                            steinbock_rahel=steinbock_rahel,summe_km_rahel=summe_km_rahel,
                            steinbock_moni=steinbock_moni,summe_km_moni=summe_km_moni,
-                           steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni)
+                           steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, list=list)
 
-@app.route("/regeln/", methods=["GET", "POST"]) #Erklärt das Spiel und wie die Steinböcke gesammelt werden
-def regeln():
-    return render_template("regeln.html")
+@app.route("/verlauf/", methods=["GET", "POST"]) #Erklärt das Spiel und wie die Steinböcke gesammelt werden
+def verlauf():
+    return render_template("verlauf.html")
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
