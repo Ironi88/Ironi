@@ -5,6 +5,10 @@ import json
 from json import loads
 from json import dumps
 
+import plotly.express as px
+from plotly.offline import plot
+
+
 app = Flask("Ironi")
 
 def get_data():  # Allgemeine Definition, weil das Laden der Daten mehrmals gebraucht wird.
@@ -101,14 +105,22 @@ def berechnung():
             else:
                 steinbock_vroni = steinbock_vroni
 
-    list = [steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni]
-    list= list.sort()
-
     return render_template("berechnung.html",
                            steinbock_remo=steinbock_remo, summe_km_remo=summe_km_remo,
                            steinbock_rahel=steinbock_rahel,summe_km_rahel=summe_km_rahel,
                            steinbock_moni=steinbock_moni,summe_km_moni=summe_km_moni,
                            steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, list=list)
+
+
+
+def diagramm():
+    vorname, steinboecke = get_data()
+    fig = px.bar(x=vorname, y=steinboecke)
+    div = plot(fig, output_type="div")
+    fig.show()
+    #return div
+    return render_template('berechnung.html', viz_div=div, name="Fabian")
+
 
 @app.route("/verlauf/", methods=["GET", "POST"]) #Erklärt das Spiel und wie die Steinböcke gesammelt werden
 def verlauf():
