@@ -1,5 +1,5 @@
 {% include "header.html" %}
-<div class="container">
+<div class="container-fluid">
 <h3> Rangliste Steinbock Challenge </h3><br>
 
 <p> Remo ist {{ summe_km_remo }} km gefahren und hat {{ steinbock_remo }} 🐐 Steinböcke gesammelt.
@@ -13,11 +13,10 @@
 
 <p> Vroni ist {{ summe_km_vroni }} km gefahren und hat {{ steinbock_vroni }} 🐐 Steinböcke gesammelt.
     </p>
-
-<p> Diagramm Test {{ visual_div|safe }}</p>
-
 </div>
 
-
+<div class="container-fluid">
+<h4>Übersicht der Challenge</h4>  <p> {{ visual|safe }} </p>  <!--variable|safe ermöglicht unveränderte Übergabe an Jinja -->
+</div>
 
 </body>

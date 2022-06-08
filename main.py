@@ -1,3 +1,4 @@
+#Import von Modulen
 from flask import Flask
 from flask import render_template
 from flask import request
@@ -8,10 +9,12 @@ from json import dumps
 import plotly.express as px
 from plotly.offline import plot
 
-
+#mein erstes Projekt in python :)
 app = Flask("Ironi")
 
-def get_data():  # Allgemeine Definition, weil das Laden der Daten mehrmals gebraucht wird.
+# Funktion zum die Daten gemachten Eintraege zu laden. Wir mehrmals gebracht.
+# Um  den Code so kurz wie möglich zu halten kriegt sie später eine kurze def data = get_data()
+def get_data():
     try:
         with open("aktivitaeten.json", "r") as open_file:
             eintraege = json.load(open_file)
@@ -105,25 +108,25 @@ def berechnung():
             else:
                 steinbock_vroni = steinbock_vroni
 
-    return render_template("berechnung.html",
-                           steinbock_remo=steinbock_remo, summe_km_remo=summe_km_remo,
-                           steinbock_rahel=steinbock_rahel,summe_km_rahel=summe_km_rahel,
-                           steinbock_moni=steinbock_moni,summe_km_moni=summe_km_moni,
-                           steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, list=list)
 
     visual = px.bar(
-    x=["Remo", "Rahel", "Moni", "Vroni"],
-    y=[steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni],
-     labels = {"x": "Vorname", "y": "Steinboecke"}
-                )
+        x=["Remo", "Rahel", "Moni", "Vroni"],
+        y=[steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni],
+        labels={"x": "Name von Sportbenzin MitarbeiterIn", "y": "Anzahl Steinboecke"}
+    )
     div_visual = plot(visual, output_type="div")
 
-    return render_template('berechnung.html',steinbock_remo=steinbock_remo,steinbock_rahel=steinbock_rahel, steinbock_moni=steinbock_moni, steinbock_vroni=steinbock_vroni, visual=div_visual)
+    return render_template("berechnung.html",
+                           steinbock_remo=steinbock_remo, summe_km_remo=summe_km_remo,
+                           steinbock_rahel=steinbock_rahel, summe_km_rahel=summe_km_rahel,
+                           steinbock_moni=steinbock_moni, summe_km_moni=summe_km_moni,
+                           steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, visual=div_visual)
 
-
+"""
 @app.route("/verlauf/", methods=["GET", "POST"])
 def verlauf():
     return render_template("verlauf.html")
+"""
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
