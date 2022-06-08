@@ -111,18 +111,17 @@ def berechnung():
                            steinbock_moni=steinbock_moni,summe_km_moni=summe_km_moni,
                            steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, list=list)
 
+    visual = px.bar(
+    x=["Remo", "Rahel", "Moni", "Vroni"],
+    y=[steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni],
+     labels = {"x": "Vorname", "y": "Steinboecke"}
+                )
+    div_visual = plot(visual, output_type="div")
+
+    return render_template('berechnung.html',steinbock_remo=steinbock_remo,steinbock_rahel=steinbock_rahel, steinbock_moni=steinbock_moni, steinbock_vroni=steinbock_vroni, visual=div_visual)
 
 
-def diagramm():
-    vorname, steinboecke = get_data()
-    fig = px.bar(x=vorname, y=steinboecke)
-    div = plot(fig, output_type="div")
-    fig.show()
-    #return div
-    return render_template('berechnung.html', viz_div=div, name="Fabian")
-
-
-@app.route("/verlauf/", methods=["GET", "POST"]) #Erklärt das Spiel und wie die Steinböcke gesammelt werden
+@app.route("/verlauf/", methods=["GET", "POST"])
 def verlauf():
     return render_template("verlauf.html")
 
