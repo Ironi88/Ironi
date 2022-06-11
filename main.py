@@ -50,10 +50,10 @@ def formular():
 
 @app.route("/berechnung/", methods=["GET", "POST"])
 
+#Berechung der Anzahlsteinboecke Steinboecke
 def berechnung():
-    data = get_data()  # defintion von oben Zugriff auf json datei aktivitäten
-
-    steinbock_remo = 0
+    data = get_data()   # defintion von oben Zugriff auf json datei aktivitäten
+    steinbock_remo = 0  #0 verhindert Errow bei Datensatz 0
     summe_km_remo = 0
     steinbock_rahel=0
     summe_km_rahel =0
@@ -65,12 +65,12 @@ def berechnung():
     for value in data:  # for loop damit bereits gesammelt Steinböcke addiert werden
         if value["Vorname"] == "Remo":
             try:
-                summe_km_remo += float(value["gefahrene Km"]) #addition assignment operator add two values together and assign the resultant value to a variable https://www.google.ch/search?q=%2B+%3D+in+python+what+does+it+mean&sxsrf=ALiCzsbR_7zAMJBUIkkZE28xz1NE60o80w%3A1654020749387&source=hp&ei=jVqWYsSvFa2blwTWnojwAQ&iflsig=AJiK0e8AAAAAYpZonVozWgJFg-qhfYSOBgyDyoh8ZnbI&ved=0ahUKEwiEqt25q4r4AhWtzYUKHVYPAh4Q4dUDCAY&uact=5&oq=%2B+%3D+in+python+what+does+it+mean&gs_lcp=Cgdnd3Mtd2l6EAMyBggAEB4QFjIGCAAQHhAWOgsIABCABBCxAxCDAToECAAQAzoECC4QAzoFCAAQgAQ6BAgAEBM6AggmOggIABAeEBYQEzoFCCEQoAE6BQgAEMsBOgYIABAeEA06CAgAEB4QDxANOggIABAeEA0QEzoICAAQHhAWEAo6CAgAEB4QDxAWOggIIRAeEBYQHToECCEQFVAAWLCMAWCojgFoEXAAeAKAAd0BiAGYI5IBBzM3LjEwLjGYAQCgAQE&sclient=gws-wiz
+                summe_km_remo += float(value["gefahrene Km"]) #auch halbe km sollen zählen
             except:
                 continue
 
             if summe_km_remo >=100:
-                steinbock_remo = (int(summe_km_remo / 100))
+                steinbock_remo = (int(summe_km_remo / 100)) #nur ganze Steinboecke werden gezählt
             else:
                 steinbock_remo = steinbock_remo
 
@@ -112,15 +112,18 @@ def berechnung():
     visual = px.bar(
         x=["Remo", "Rahel", "Moni", "Vroni"],
         y=[steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni],
-        labels={"x": "Name von Sportbenzin MitarbeiterIn", "y": "Anzahl Steinboecke"}
+        labels={"x": "Name von Sportbenzin MitarbeiterIn", "y": "Anzahl Steinboecke"},
+
     )
     div_visual = plot(visual, output_type="div")
+
 
     return render_template("berechnung.html",
                            steinbock_remo=steinbock_remo, summe_km_remo=summe_km_remo,
                            steinbock_rahel=steinbock_rahel, summe_km_rahel=summe_km_rahel,
                            steinbock_moni=steinbock_moni, summe_km_moni=summe_km_moni,
-                           steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, visual=div_visual)
+                           steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, visual=div_visual
+                          )
 
 """
 @app.route("/verlauf/", methods=["GET", "POST"])

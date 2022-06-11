@@ -1,40 +1,22 @@
 [
     {
         "Vorname": "Remo",
-        "datum": "02.06.2022",
-        "gefahrene Km": "240",
-        "gefahrene Hm": "100"
-    },
-    {
-        "Vorname": "Remo",
-        "datum": "02.06.2022",
-        "gefahrene Km": "120",
-        "gefahrene Hm": "50"
-    },
-    {
-        "Vorname": "Remo",
-        "datum": "02.06.2022",
-        "gefahrene Km": "260",
-        "gefahrene Hm": "200"
-    },
-    {
-        "Vorname": "Remo",
-        "datum": "02.06.2022",
-        "gefahrene Km": "200"
+        "datum": "11.06.2022",
+        "gefahrene Km": "150"
     },
     {
         "Vorname": "Rahel",
-        "datum": "02.06.2022",
-        "gefahrene Km": "100"
-    },
-    {
-        "Vorname": "Vroni",
-        "datum": "02.06.2022",
-        "gefahrene Km": "140"
+        "datum": "12.06.2022",
+        "gefahrene Km": "200"
     },
     {
         "Vorname": "Moni",
-        "datum": "03.06.2022",
-        "gefahrene Km": "150"
+        "datum": "11.06.2022",
+        "gefahrene Km": "50"
+    },
+    {
+        "Vorname": "Vroni",
+        "datum": "11.06.2022",
+        "gefahrene Km": "250"
     }
 ]
