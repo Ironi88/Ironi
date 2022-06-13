@@ -6,7 +6,7 @@
 1. Problembeschreibung/Motivation
 2. Benutzung
 3. Architektur 
-4. Ungelöste/unbearbeitete Probleme
+4. Ungelöste Themen und Verbesserungsvorschläge 
 5. Link to github
 
 ##1. Problembeschreibung/Motivation
@@ -18,7 +18,7 @@ Eine Dokumentation und ein Ziel fördert die Motivation.
 Ein Ziel vor Augen treibt die Menschen an und es kommt Bewegung ins Spiel. 
 Das Spiel wurde für das Team von sportbenzin.ch programmiert. 
 
-##2. Betrieb (noch zu klären)
+##2. Betrieb 
  - Was muss man bei der Ausführung beachten. Was muss eventuell davor noch gemacht werden.
  - Welch Datei muss ausgeführt werden
 
