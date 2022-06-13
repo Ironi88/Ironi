@@ -4,7 +4,7 @@ from flask import render_template
 from flask import request
 import json
 from json import loads
-from json import dumps
+
 
 import plotly.express as px
 from plotly.offline import plot
@@ -108,12 +108,10 @@ def berechnung():
             else:
                 steinbock_vroni = steinbock_vroni
 
-
     visual = px.bar(
         x=["Remo", "Rahel", "Moni", "Vroni"],
         y=[steinbock_remo, steinbock_rahel, steinbock_moni, steinbock_vroni],
-        labels={"x": "Name von Sportbenzin MitarbeiterIn", "y": "Anzahl Steinboecke"},
-
+        labels={"x": "Name Sportbenzin MitarbeiterIn", "y": "Anzahl Steinboecke"},
     )
     div_visual = plot(visual, output_type="div")
 
@@ -125,11 +123,12 @@ def berechnung():
                            steinbock_vroni=steinbock_vroni, summe_km_vroni=summe_km_vroni, visual=div_visual
                           )
 
-"""
-@app.route("/verlauf/", methods=["GET", "POST"])
-def verlauf():
-    return render_template("verlauf.html")
-"""
+@app.route("/datensammlung/", methods=["GET", "POST"])
+def datensammlung():
+    with open("aktivitaeten.json") as open_file:
+        json_as_string = open_file.read()
+        daten_inhalt = loads(json_as_string)
+    return render_template("datensammlung.html", daten_inhalt=daten_inhalt)
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
