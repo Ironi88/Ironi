@@ -19,8 +19,9 @@ Ein Ziel vor Augen treibt die Menschen an und es kommt Bewegung ins Spiel.
 Das Spiel wurde für das Team von sportbenzin.ch programmiert. 
 
 ##2. Betrieb 
- - Was muss man bei der Ausführung beachten. Was muss eventuell davor noch gemacht werden.
- - Welch Datei muss ausgeführt werden
+- Flask, Plottly und Json werden benötigt
+- Main.py muss als erstes ausgeführt werden
+
 
 ##3. Benutzung
 Erfassen: Vorname, Datum und Kilometer
@@ -32,8 +33,8 @@ Ausgabe: Gesammelte KM zeigen die gesammelte Anzahl der Steinbock an
 ##3.👀 Architektur 
 <!-- Erstellt im dawio 
 https://app.diagrams.net/#G1lI50nTNPo-A5iqcfEOgooin0duN972aB -->
-![](../../../../../Downloads/Untitled Diagram.drawio.png)
 
+![Ablauf Grafisch](Diagramm.png)
 ##4.Ungelöste/unbearbeitete Probleme
 Was wurde nicht gelöst?
 Die Variablen bei der Berechnung sind sehr spezifisch auf die Personen. 
@@ -43,7 +44,6 @@ Der Code würde sonst unübersichtlich und Änderungen sind mühsam vorzunehmen.
 Welche Verbesserungen könnten noch gemacht werden?
 - Weitere Optionen hinzufügen um Steinboecke zu sammeln
 - Challenge Ende definieren
-
 
 ##5. Link to github
 Link to my code https://github.com/Ironi88/Ironi
