@@ -1,7 +1,8 @@
 {% include "header.html" %}
+<!--HTML/Jinja Block-->
 <div class="container">
 <h4> Rangliste Steinbock Challenge </h4>
-
+<!--Berechnung wird mit Jinja eingefuegt,Variable aus dem Main -->
 <p> Remo ist {{ summe_km_remo }} km gefahren und hat {{ steinbock_remo }} 🐐 Steinböcke gesammelt.
     <br> </p>
 
@@ -16,7 +17,8 @@
 </div>
 <br>
 <div class="container">
- <p> {{ visual|safe }} </p>  <!--variable|safe ermöglicht unveränderte Übergabe an Jinja -->
+ <p> {{ visual|safe }} </p>  <!--damit div-inhalt ermöglicht unveränderte Übergabe an Jinja mit variable safe-->
 </div>
 
-</body>
+
+</body> <!-- Body auf bereits in header.html-->

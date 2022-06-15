@@ -4,10 +4,10 @@
         <h3>Übersicht aller Eintraege</h3>
         <br>
         {% if daten_inhalt %}  <!-- Jinja link zu Python /HTML -->
-            <table class="table table-striped table-sm">
+            <table class="table table-striped table-secondary table-sm"> <!-- striped Helligkeit im Wechsel-->
                 <thead>
-                    <tr>
-                        <th>Vorname</th>
+                    <tr> <!--Zeile-->
+                        <th>Vorname</th> <!--spalte(n)-->
                         <th>Datum</th>
                         <th>Kilometer</th>
                     </tr>
@@ -23,10 +23,10 @@
                 </tbody>
             </table>
         {% else %}
-            <p> Keine Einträge vorhanden.</p>
+            <p> Mehr mehr gesammelt? </p>
         {% endif %}
         <br>
-        <a class="btn btn-secondary" href="/formular/" role="button">Neuer Eintrag</a> <!-- Link auf Formular -->
+        <p class="btn btn-secondary" href="/formular/" role="button"> Weitere km eintragen</p> <!-- Link auf Formular -->
     </div>
 
 
@@ -34,3 +34,4 @@
 
 
 </body>
+</div>

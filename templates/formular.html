@@ -1,9 +1,11 @@
+<!--Jinja bezug zu header.html / macht den Code etws kuerzer und Anpassungen muessen nur einmal gemacht werden-->
 {% include "header.html" %}
 <div class="container">
     <h1>VeloMio Challenge</h1>
 <!-- Dropdown Menü hat den Vorteil, dass die Eingabe Möglichkeiten beschränkt sind-->
     <form method="POST">
-        <select class="form-select" aria-label="Default select example" name="vorname"> <!--quelle https://getbootstrap.com/docs/5.0/forms/select/ -->
+        <select class="form-select" aria-label="Default select example" name="vorname">
+            <!--quelle https://getbootstrap.com/docs/5.0/forms/select/ -->
             <option selected > Hi, wer bist du? </option>
             <option value="Remo">Remo</option>
             <option value="Rahel">Rahel</option>
@@ -17,7 +19,7 @@
     </form>
 
 
-<p> {{ anzeige }} </p>
+<p> {{ anzeige }} </p>  <!-- variable im main "formular" im render template def. zur Rueckgabe-->
 </div>
 </body>
 

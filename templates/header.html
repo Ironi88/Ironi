@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--verlinkung zu Bootstrap Static Ornder in Flask-->
     <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
     <title>VeloMio Challenge</title>
 </head>
 <body>
 
-<div class="container-fluid">
-        <header class="d-flex justify-content-center py-3">
+<div class="container-fluid"> <!-- in Container gepackt damit die Anzeige nicht so links am Rand klept-->
+        <header class="d-flex justify-content-center py-3"> <!-- Bootstrap template Navigation -->
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
             <li class="nav-item"><a href="/formular" class="nav-link">Dateneingabe</a></li>
