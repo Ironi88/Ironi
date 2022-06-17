@@ -36,7 +36,8 @@ Ausgabe: Gesammelte KM zeigen die gesammelte Anzahl der Steinbock an
 <!-- Erstellt im dawio 
 https://app.diagrams.net/#G1lI50nTNPo-A5iqcfEOgooin0duN972aB -->
 ![Ablauf Grafisch](Diagramm.png)
-##4.Ungelöste/unbearbeitete Probleme
+
+## 4.Ungelöste/unbearbeitete Probleme
 Was wurde nicht gelöst?
 Die Variablen bei der Berechnung sind sehr spezifisch auf die Personen. 
 Wenn das Programm erweitert würde und noch mehr Personen dazu kommen, 
@@ -53,6 +54,7 @@ Link to my code https://github.com/Ironi88/Ironi
 
 ## 6. Quellen
 - Tutoring 
+- Mitstudierende
 - Foliensaetze aus dem Modulunterricht
 - https://getbootstrap.com/docs/4.5/getting-started/introduction/
 - google

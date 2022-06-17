@@ -6,8 +6,8 @@ import json #java datenbank
 from json import loads #gespeicherte Daten laden
 
 
-import plotly.express as px #Datenvisualisierungsbibliothek
-from plotly.offline import plot #offline plot funktion als div erstellt und dann mit flask rendern
+import plotly.express as px   #Datenvisualisierungsbibliothek
+from plotly.offline import plot  #offline plot funktion als div erstellt und dann mit flask rendern
 
 
 app = Flask("Ironi") #mein erstes Projekt in python :)
